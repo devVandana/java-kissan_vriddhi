@@ -1,0 +1,295 @@
+<html>
+<title>
+    Corn Details
+    </title>
+    <head>
+        <link rel="stylesheet" href="CSS/rfasal.css" />
+        <link rel="stylesheet" href="CSS/Header.css" />
+        <link rel="stylesheet" href="CSS/Footer.css" />
+        <script src="script/content.js"></script>
+
+    </head>
+    
+<body id="cornbody">
+ 
+        <!-- Navbar -->
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="photo/img1.PNG" width="100px" height="100px">
+        </div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+            <li><a href="MainPage.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="farmerhome.html">Farmer List</a></li>
+            <li><a href="Farmer.html">Farmer</a></li>
+            <li><a href="productview.html">Pesticides & Fertilizers</a></li>
+            <li><a href="cropdetails.html">Crops</a></li>
+            <li><a href="Customer.html">Customer</a></li>
+        </div>
+        </ul>
+    </nav>
+    
+    <!--  heading for the corn crop   -->
+    <h1 id="heading"  style="background-color: cadetblue"> Corn Crop</h1>
+    <!-- There are two main classes upper and bottom, then subclasses in these two classes    -->
+        
+    <!-- first main class    -->
+
+    <div id="upper">
+        
+    <!--  Sub class of upper main class   -->
+
+    <div id="upperleft">
+
+    <h2>Plant Description:</h2>
+    <p> The corn plant is a tall annual grass with a stout, erect, solid stem. The large narrow leaves have wavy margins and are spaced alternately on opposite sides of the stem. Staminate (male) flowers are borne on the tassel terminating the main axis of the stem. The pistillate (female) inflorescences, which mature to become the edible ears, are spikes with a thickened axis, bearing paired spikelets in longitudinal rows; each row of paired spikelets normally produces two rows of grain.<br>
+        <b> Uses and Products:</b> Corn is one of the world’s most productive and dominant crops. It is grown extensively as food for both humans and livestock, as a biofuel, and as a crude material in industry.
+        <br><b> Food and nutrition: </b>Corn is the third largest plant-based food source in the world. Despite its importance as a major food in many parts of the world, corn is inferior to other cereals in nutritional value. Its protein is of poor quality, and it is deficient in niacin. Diets in which it predominates often result in pellagra (niacin-deficiency disease). Corn is high in dietary fibre and rich in antioxidants. 
+        </p>
+
+</div>
+    
+<div class="upperright">
+    
+    <img src="photo/corn.jpg" alt="Corn Crop image" id="photo">
+    
+    </div>  
+
+        <!--  End of upper main class   -->
+    </div>
+    <br>
+     <div id="bottom">
+         <!--  bottomleft subclass is to align the tables for fertilizers and pesticides  to align them at left corner of page  -->
+         <div align="left" id="bottomleft">
+         
+         <div id="leftlist" style="background-color: cadetblue">	
+		<h3 style="text-align: center">Fertilizers</h3>
+		<div id="ferti"> </div>
+</div>
+      <br>  
+        <div id="rightlist" style="background-color: cadetblue">	
+		<h3 style="text-align: center">Pesticides</h3>
+		<div id="pest"> </div>
+</div>
+        
+        
+        
+        <br>
+		<input type="text" id="addfer" style="margin-left: 9%; background-color: cadetblue;"/>&nbsp;<button id="button1" onclick="addFert();" style="background-color: cadetblue;">Add Fertilizer </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             
+        <input type="text" id="addpes"; style="background-color: cadetblue;"  />  
+        <button id="button1" onclick="addPest()"; style="background-color: cadetblue;">Add Pesticide </button>
+		
+		<br/><br>
+		<select id="taskDropdown" style="margin-left: 9%;background-color: cadetblue;"></select>
+		<button id="button2" onclick="deleteFert();" style="background-color: cadetblue;">Delete Fertilizer</button>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <select id="taskDropdown1" style="background-color: cadetblue;"></select>
+		<button id="button2" onclick="deletePest();" style="background-color: cadetblue;">Delete Pesticide</button>
+        
+        <br>
+        <br>
+		<br/><br>
+             
+             
+        
+         </div>
+        
+        
+           <!--  bottomright sub class is for the video and buttons to align them at the right corner of the display   -->
+         <div align="right" class="bottomright">
+          
+                 <video id="video" width="600" >
+    <source src="video/cornvideo.mp4" type="video/mp4" style="border: 1px solid black">
+             </video>
+             <br><br>
+                 
+             <div align="center" id="control">
+                    <button class="buttoncorn" onclick="playPause()">Play/Pause</button> 
+                    <button class="buttoncorn" onclick="makeBig()">Big</button>
+                    <button class="buttoncorn" onclick="makeSmall()">Small</button>
+                    <button class="buttoncorn" onclick="makeNormal()">Normal</button>
+                 <button class="buttoncorn" onclick="goBack()">Go Back </button>
+             </div>
+                 <!-- End of the bottomright subclass    -->
+
+         </div> 
+
+    </div>
+    <br><br>
+
+        <!--  javascript for the functionality of pesticide, ferticide's add and delete button   -->
+    
+        <script>
+			let tasks=['Granular Urea','Diammonium phosphate','Potassium'];
+			listTask();
+			dropdown();
+
+			function listTask(){
+				let results ="<ol>";
+				for(let i=0;i<tasks.length;i++){
+					results += "<li>" + tasks[i] + "</li>";
+				}
+				results += "</ol>";
+				document.getElementById("ferti").innerHTML = results;
+
+			}
+
+
+			function addFert(){
+				let addFert = document.getElementById("addfer").value;
+				tasks.push(addFert);
+				document.getElementById("addfer").value="";
+				listTask();
+            	dropdown();
+
+			}
+			function dropdown(){
+				let opt="";
+				for(let i=0;i<tasks.length;i++){
+					opt += "<option>" + tasks[i] + "</option>";
+				}
+				console.log(opt);
+
+				document.getElementById("taskDropdown").innerHTML = opt;
+
+			}
+			
+			function deletetask3(){
+				let task=document.getElementById("taskDropdown").value;
+				for(let i=0;i<tasks.length;i++){
+					if(task==tasks[i])
+						tasks.splice(i,1);
+				}
+				listTask();
+				dropdown();
+			}
+			function deleteFert(){
+				let task=document.getElementById("taskDropdown");
+				tasks.splice(task.selectedIndex,1);
+
+				listTask();
+				dropdown();
+			}
+
+            
+            
+            
+            
+            let tasks1=['Glyphosate','Cell wall polysaccharides','MCPA 750 Herbicide'];
+			listTask1();
+			dropdown1();
+            
+            function listTask1(){
+				let results1 ="<ol>";
+				for(let i=0;i<tasks1.length;i++){
+					results1 += "<li>" + tasks1[i] + "</li>";
+				}
+				results1 += "</ol>";
+				document.getElementById("pest").innerHTML = results1;
+
+			}
+            
+            function addPest(){
+				let addPest = document.getElementById("addpes").value;
+				tasks1.push(addPest);
+				document.getElementById("addpes").value="";
+				listTask1();
+            	dropdown1();
+
+			}
+            
+            function dropdown1(){
+				let opt1="";
+				for(let i=0;i<tasks1.length;i++){
+					opt1 += "<option>" + tasks1[i] + "</option>";
+				}
+				console.log(opt1);
+
+				document.getElementById("taskDropdown1").innerHTML = opt1;
+
+			}
+            
+            function deletetask4(){
+				let task1=document.getElementById("taskDropdown1").value;
+				for(let i=0;i<tasks1.length;i++){
+					if(task1==tasks1[i])
+						tasks1.splice(i,1);
+				}
+				listTask1();
+				dropdown1();
+			}
+            
+            function deletePest(){
+				let task1=document.getElementById("taskDropdown1");
+				tasks1.splice(task1.selectedIndex,1);
+
+				listTask1();
+				dropdown1();
+			}      
+		</script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- Footer -->
+
+          <footer class="footer-distributed">
+
+			<div class="footer-left">
+        
+				<h3>About<span>Kissan Vardhi</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					|
+					<a href="#">Blog</a>
+					|
+					<a href="#">About</a>
+					|
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">© Kissan Vardhi</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span>Toronto canada</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 012399230</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@kissanvardhi@gmail.com">kissanvardhi@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					We provide a portal for farmers and their customers</p>
+			</div>
+		</footer>
+	
+
+    
+    
+    
+    </body>
+</html>

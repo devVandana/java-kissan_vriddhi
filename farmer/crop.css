@@ -1,0 +1,63 @@
+body{
+    background-color: lightseagreen;
+    font-family: "montserrat";
+}
+
+#grid1 {
+    padding-top: 45px;
+    height: 52%;
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    
+  }
+  
+  
+  #grid2 {
+    padding-top: 60px;
+    height: 52%;
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+  }
+#g1 {
+    
+    text-align: center;
+    padding: 10px;
+    height: 350px;
+    background:lightblue;
+    border: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 70%;
+    box-shadow:0 14px 28px rgba(0,0,0,0.25) ;
+    transition: 1.5s;
+    position:relative;
+    overflow:hidden;
+    
+}
+#g1:hover{
+    
+    transform:perspective(600px) rotateY(180deg);
+  box-shadow:0 3px 6px rgba(0,0,0,0.16),
+  0 3px 6px rgba(0,0,0,0.23) ;
+  
+  }
+  #g1::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    display:block;
+    border-radius: 50% 50% 0 0;
+    background: linear-gradient(to bottom,rgba(0,176,155,0.5),rgba(150,201,61,1));
+    z-index:-1;
+    transition: 1.5s;
+    
+  }
+  #g1:hover::before{
+    height:0%;
+  }
+
+

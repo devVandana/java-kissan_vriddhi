@@ -1,0 +1,136 @@
+<html>
+<title>
+    Farmer Hompage 
+    </title>
+    <head>
+        <link rel="stylesheet" href="farmerhome.css" />
+        <link rel="stylesheet" href="CSS/Header.css" />
+        <link rel="stylesheet" href="CSS/Footer.css" />
+        <script src="script/content.js"></script>
+
+    </head>
+    
+<body>
+    
+        <!-- Navbar -->
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="photo/img1.PNG" width="100px" height="100px" id="f1">
+        </div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+            <li><a href="MainPage.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="Farmer.html">Farmer</a></li>
+            <li><a href="farmerhome.html">Farmer List</a></li>
+
+            <li><a href="productview.html">Pestisides & Fertilizers</a></li>
+         <li><a href="cropdetails.html">Crops</a></li>
+            <li><a href="Customer.html">Customer</a></li>
+        </div>
+        </ul>
+    </nav>
+    
+    
+    <!-- main class for upper row  -->
+    <div id="grid1"> 
+        
+        <!-- sub class for upper left grid  -->
+    <div id="g1">
+    <h2> Rahul Karadwal</h2>
+        <!-- photo will change its size while on mouse over and it will hide the paragraph content-->
+     <img src="photo/rahul.jpg" alt="Rahul Photo";        onmouseover="document.getElementById('para1').style.display = 'none',bigImg(this)"; onmouseout="document.getElementById('para1').style.display = 'block', normalImg(this)" ;
+ border="0"; >  
+    <p id="para1" onclick="changeText(this)"; > <b>See Description</b></p>
+        
+        
+    </div>
+    
+    <!-- sub class for upper right grid  -->
+    <div id="g2">
+    <h2> Gaurav Choudhary</h2>
+        <img src="photo/gaurav.jpeg" alt="gaurav Photo"; onmouseover="document.getElementById('para2').style.display = 'none',bigImg(this)"; onmouseout="document.getElementById('para2').style.display = 'block', normalImg(this)" ;
+ border="0"; > 
+        <p id="para2" onclick="changeText1(this)" > <b> See Description</b> </p>
+    </div>
+        
+        <!-- end of upper main class  -->
+    </div>
+    <br>
+    <!--  main class second row  -->
+    <div id="grid2">
+        
+        <!-- sub class for bottom left grid -->
+    <div id="g3">
+    <h2> Vandana</h2>
+        
+        <img src="photo/vandana.jpeg" alt="Vandana Photo";  onmouseover="document.getElementById('para3').style.display = 'none',bigImg(this)"; onmouseout="document.getElementById('para3').style.display = 'block', normalImg(this)" ;
+ border="0"; >
+        
+        <div align="center" id="paragraph"> 
+        <p id ="para3" onclick="changeText2(this)"; > <b> See Description</b> </p>
+    </div>
+        </div>
+        
+        <!-- sub class for bottom right grid -->    
+    <div id="g4">
+    <h2> Sharon Sebastian</h2>
+        <img src="photo/sharon.jpeg" alt="sharon Photo"; onmouseover="document.getElementById('para4').style.display = 'none',bigImg(this)"; onmouseout="document.getElementById('para4').style.display = 'block', normalImg(this)" ;
+ border="0";>  
+        <p id="para4" onclick="changeText3(this)"> <b>See Description</b> </p>
+    </div>
+    </div>
+    
+    
+    <!-- Footer -->
+
+          <footer class="footer-distributed">
+
+			<div class="footer-left">
+        
+				<h3>About<span>Kissan Vardhi</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					|
+					<a href="#">Blog</a>
+					|
+					<a href="#">About</a>
+					|
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">© Kissan Vardhi</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span>Toronto canada</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 012399230</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@kissanvardhi@gmail.com">kissanvardhi@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					We provide a portal for farmers and their customers</p>
+			</div>
+		</footer>
+	
+
+    
+    
+    </body>
+</html>

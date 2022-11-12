@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="CSS/MainPage.css" />
+<link rel="stylesheet" href="CSS/Header.css" />
+<link rel="stylesheet" href="CSS/Login.css" />
+<script src="JS/Login.js"></script>
+<title>KISSAN VARDDHI</title>
+</head>
+<body>
+      
+
+        <!-- Navbar -->
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="img1.PNG" width="100px" height="100px">
+        </div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+            <li><a href="MainPage.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="farmerhome.html">Farmer List</a></li>
+
+            <li><a href="Farmer.html">Farmer</a></li>
+            <li><a href="productview.html">Pestisides & Fertilizers</a></li>
+         <li><a href="cropdetails.html">Crops</a></li>
+            <li><a href="Customer.html">Customer</a></li>
+        </div>
+        </ul>
+    </nav>
+    
+    
+  <div class="farm"></div>
+
+    <div id="box1">
+        
+        <div class="button-box">
+            <div id="btn"></div>
+          
+            <button type="button" class="toggle-btn" onclick="Login()">Login</button>
+            <button type="button" class="toggle-btn" onclick="Register()">Register</button>
+        </div>
+        <form id="Login" class="input-group1">
+            <input type="text" class="input-field" placeholder="User ID" required>
+            <input type="password" class="input-field" placeholder="Enter Password" required>
+            <input type="checkbox" class="check-box"><span>Remember Password</span>
+            <button type="submit" class="submit-btn">Log In</button>
+                </form>
+
+                <form id="Register" class="input-group">
+                    <input type="text" class="input-field" placeholder="Enter User ID" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="email" class="input-field" placeholder="Enter Email ID" required>
+                    <input type="tel" class="input-field" placeholder="Enter Phone Number" required>
+                    <input type="text" class="input-field" placeholder="Enter Region" required>
+                    <input type="checkbox" class="check-box"><span>I agree to the terms & condition</span>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+<script src="js/slogin.js"></script>
+</div>
+            </body>
+<!-- Footer -->
+</html>

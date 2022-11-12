@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   body {
+    font-family: cursive;
+   }
+   a {
+    text-decoration: none;
+   }
+   li {
+    list-style: none;
+   }
+img{
+    max-height: 500px;
+    width: 100%;
+        margin-top: 20px;
+
+}
+
+#slideshow-container{
+    margin-top: 20px;
+	width:100%;
+	height:600px;
+	}
+
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.mySlides {
+    margin-left: 10px;
+    display:flex;
+    position:inherit;
+    max-width: 100%;
+    max-height: 100%
+    padding: 10px;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+
+/* The footer is fixed to the bottom of the page */
+
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 30%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+a.new:link {
+  color: black;
+}
+
+a.new:visited {
+  background-color: cyan;
+}
+
+a.new:hover {
+  background-color: lightgreen;
+}
+
+a.new:active {
+  background-color: hotpink;
+} 
+
+
+#container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+  #leftThing {
+    padding: 10px;
+    height: 500px;
+    background:#F5F5F5;
+    border-radius: 25px;
+    margin-left: 10px;
+    width: 70%;
+  }
+ 
+  #rightThing {
+    padding: 10px;
+    background:#F5F5F5;
+    margin-left: 10px;
+    width: 27%;
+    border-radius: 25px;
+    background:#F5F5F5;
+  }
+
+  #newsheader{
+    color: maroon;
+  }
+
+
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+#box1{
+	width:98%;
+	height:170px;
+	margin:10px;
+	padding:10px;
+}
+
+#box1 {
+	background:#F5F5F5;
+    border-radius: 25px;
+}
+
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    margin-left: 10px;
+    float: left;
+    width: 20%;
+    padding: 10px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  } 
+
+   .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 33.33%;
+    padding: 2px;
+  } 
+
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: inherit;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: inherit;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.xdContainer{
+    align-content: center;
+    height: 300px;
+    width: 50%;
+    background-color: #000;
+    position:absolute;
+    margin-left: 8em;
+    margin-top: 10px;
+    }
+
+/* Adding backround effect*/
+
+body{
+    background: -moz-linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #d911f2 66%, #ffa079 100%);
+    background: -webkit-linear-gradient(45deg, #02e1ba 0%,#26c9f2 29%,#d911f2 66%,#ffa079 100%);
+    background: linear-gradient(45deg, #02e1ba 0%,#26c9f2 29%,#d911f2 66%,#ffa079 100%);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  /*min-height: calc(100vh - 2rem);*/ 
+}
+
+body::before, 
+body::after {
+  content: "";
+  width: 70vmax;
+  height: 70vmax;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.07);
+  left: -20vmin;
+  top: -20vmin;
+  animation: morph 15s linear infinite alternate, spin 20s linear infinite;
+  z-index: 1;
+  will-change: border-radius, transform;
+  transform-origin: 55% 55%;
+  pointer-events: none; 
+}
+  
+body::after {
+    width: 70vmin;
+    height: 70vmin;
+    left: auto;
+    right: -10vmin;
+    top: auto;
+    bottom: 0;
+    animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
+    transform-origin: 20% 20%; 
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0 50%
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0 50%
+  }
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%; }
+  100% {
+    border-radius: 40% 60%; } 
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn); 
+  } 
+}
+  .st0{display:none;}
+  .st1{display:inline;}
+  .st2{opacity:0.29;}
+  .st3{fill:#FFFFFF;}
+  .st4{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
+  .st5{clip-path:url(#SVGID_4_);}
+  .st6{clip-path:url(#SVGID_6_);}
+  .st7{clip-path:url(#SVGID_8_);}
+  .st8{clip-path:url(#SVGID_10_);}
+  .st9{fill:none;}
+  .st10{clip-path:url(#SVGID_12_);}
+  .st11{opacity:0.7;}
+  .st12{clip-path:url(#SVGID_14_);}
+  .st13{opacity:0.2;}
+  .st14{clip-path:url(#SVGID_16_);}
+  .st15{opacity:0.3;fill:#FFFFFF;enable-background:new    ;}

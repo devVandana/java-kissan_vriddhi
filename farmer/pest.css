@@ -1,0 +1,72 @@
+body{
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+        -45deg, 
+        rgba(59,173,227,1) 0%, 
+        rgba(87,111,230,1) 25%, 
+        rgba(152,68,183,1) 51%, 
+        rgba(255,53,127,1) 100%
+  );  
+  animation: AnimateBG 20s ease infinite;
+}
+
+@keyframes AnimateBG { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+#grid1 {
+    padding-top: 45px;
+    height: 52%;
+    width: 100%;
+    display: flex;
+    
+  }
+#g1 {
+    
+    text-align: center;
+    padding: 10px;
+    height: 350px;
+    background:lightblue;
+    border: 5px;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 70%;
+}
+
+#grid2 {
+    padding-top: 45px;
+    height: 52%;
+    width: 100%;
+    display: flex;
+    
+  }
+#g2 {
+    text-align: center;
+    padding: 10px;
+    height: 350px;
+    background:lightblue;
+    border: 5px;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 70%;
+}
+
+.zoom {
+  padding: 50px;
+  transition: transform .5s;
+  width: 150px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.3); /* IE 9 */
+  -webkit-transform: scale(1.3); /* Safari 3-8 */
+  transform: scale(1.3); 
+}
+
+

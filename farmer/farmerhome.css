@@ -1,0 +1,115 @@
+
+/* for body background color*/
+body{
+    background-color: wheat;
+}
+
+/* main class for the which contains rahul, gaurav in its subclass, g1 and g2  */
+#grid1 {
+    padding-top: 45px;
+    height: 52%;
+    width: 100%;
+    display: flex;
+    
+  }
+
+/* class for the top left grid*/
+#g1 {
+    text-align: center;
+    padding: 10px;
+    height: 350px;
+   
+    margin:6px;
+    width: 70%;
+    background-image: url("photo/tractor.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* class for the top right grid*/
+#g2 {
+    text-align: center;
+    padding: 10px;
+    height: 350px;
+   
+    margin:6px;
+    width: 70%;
+    background-image: url("photo/sadak.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* class for the bottom left grid */ 
+#g3 {
+    text-align: center;
+    padding: 10px;
+    height: 350px;
+   
+    margin:6px;
+    width: 70%;
+    background-image: url("photo/sarso.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+
+/* class for the bottom right grid */
+#g4 {
+    text-align: center;
+    padding: 10px;
+    height: 350px;
+    
+    margin:6px;
+    width: 70%;
+    background-image: url("photo/jeeri.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+/* second main class which for the bottom alignment which contains g3,g4 */
+#grid2 {
+    padding-top: 45px;
+    height: 52%;
+    width: 100%;
+    display: flex;
+    
+  }
+
+/* for the names of farmers */
+h2{
+    color: black;
+    align-content: center;
+}
+
+/* img class for all images in the farmerlist page */ 
+img{
+    border: 2px solid black;
+    
+    align-items: center; 
+    margin-bottom: 15px; 
+    width: 30%;
+    height: 50%;
+
+}
+
+/* for description of farmer */
+#para1, #para2, #para3, #para4{
+    text-align: center;
+    margin-top: 35px;
+    color: black;
+    border: 2px solid black;
+    background: wheat;
+    color: black;      
+}
+
+/* it will rotate the image 180 degree horizontally */
+img:hover {
+  transform: scaleX(-1);
+}
+
+
+

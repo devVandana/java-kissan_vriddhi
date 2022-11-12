@@ -1,0 +1,168 @@
+/*for the wheat crop body*/
+#wheatbody{
+    background-color: wheat;
+}
+
+/*for the rice crop body*/
+#ricebody{
+    background-color: palegreen;
+}
+
+/*for the corn crop body*/
+#cornbody{
+    background-color: skyblue;
+}
+
+/*for the sugar crop body*/
+#sugarbody{
+    background-color: darkslategrey;
+}
+
+/* It changes the heading of the corn details pages */
+#heading{
+    color:black; text-align: center; font-size: 50px;
+     border-bottom:  3px solid black;
+    border-top: 3px solid black;
+}
+
+/* this class is for the div upper which contains upperleft and upperright subclass */
+#upper {
+    padding-top: 45px;
+    height: 55%;
+    width: 100%;
+    display: flex;
+    
+  }
+#upperleft {
+    padding: 10px;
+    height: 100%;
+    margin:6px;
+    width: 70%;
+}
+#upperright {
+    padding: 10px;
+    height: 100%;
+    margin:6px;
+    width: 70%;
+    display: flex;
+}
+
+/* for image in the right top corner */
+#photo {
+    float:right;
+    width:600px;
+    height:360px; 
+    border: 1px solid black;
+}
+
+/* for buttons in wheat page */
+.buttonwheat{    
+    background-color: coral; 
+  border: 1px solid black;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px; }
+
+/* for buttons in rice page */
+.buttonrice{    
+    background-color: seagreen; 
+  border: 1px solid black;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px; }
+
+/* for buttons in sugarcane page */
+.buttonsugar{    
+    background-color: grey; 
+  border: 1px solid black;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px; }
+
+/* for buttons in corn page */
+.buttoncorn{    
+    background-color: cadetblue; 
+  border: 1px solid black;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px; 
+text-align: center;
+}
+
+/* second maine class to align bottom table and video*/
+#bottom{
+   padding-top: 45px;
+    height: 59%;
+    width: 100%;
+    display: flex;
+}
+
+
+#bottomleft{
+padding: 10px;
+    height: 100%;
+    margin:6px;
+    width: 70%;
+}
+
+#bottomright{
+    display : flex;
+    margin-left: 250px;
+    
+}
+
+
+/* for the body of lists classes */
+#leftlist, #rightlist{
+    
+    border: 2px solid black; 
+    margin-right: 10.5%; 
+    margin-left: 9%; 
+    padding-left:  5px; 
+    padding-bottom: 5px;
+}
+
+/* buttons for add, delete pesticides and fertilizers */
+#button1, #button2{    
+  border: 1px solid black;
+  color: black;
+  padding-bottom: 6px;
+    padding-top: 6px;
+    padding-left: 5px;
+    padding-right: 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px; 
+width:20%;}
+
+
+
+/* input fields for add pesticides and fertilizers */
+#addfer, #addpes{
+    
+    color: black;
+    font-size: 16px;
+    border: 1px solid black;
+    height: 9%;
+    width: 15%;
+    text-align: center;
+}
+
+/* dropdown for delete fertilizers and pesticides */
+#taskDropdown, #taskDropdown1{
+   color: black;
+    font-size: 16px;
+    border: 1px solid black;
+    height: 9%;
+    width: 15%;
+    
+ 
+}

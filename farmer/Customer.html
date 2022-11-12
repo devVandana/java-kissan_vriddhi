@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+ 
+
+  @media (max-width: 750px) {
+      #background-video { display: none; }
+      body {
+        background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
+        background-size: cover;
+      }
+  }
+
+
+
+
+	table{
+		/*background-image: url("golden-wheat-field.gif");*/
+
+		font-family: arial,sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+		padding: 100px;
+		margin-top: 400px;
+	}
+	td,th{
+		border: 2px solid #cccccc;
+		padding: 10px;
+	}
+	td{
+		color: white;
+		background-color: black;
+		opacity: 0.5;
+	}
+	th{
+		font-weight: bold;
+		text-transform: uppercase;
+		background-color: black;
+		color: white;
+	}
+	tr:nth-child(even){
+		/*background-color: #dddddd;*/
+		opacity: 0.9;
+	}
+	tr:hover{
+		background-color: black;
+		color : white;
+	}
+
+	h1{
+		/*font-family: arial,sans-serif;*/
+		size: 70px;
+		
+	}
+	#heading{
+		size: 60px;
+		font-size: 80px;
+		/*text-align: center;*/
+	}
+</style>
+<script src="js/customerfunction.js">
+</script>
+
+<link rel="stylesheet" href="customerlogin.css" />
+<link rel="stylesheet" href="CSS/Header.css" />
+<link rel="stylesheet" href="CSS/Login.css" />
+<link rel="stylesheet" href="CSS/Customer.css"/>
+<script src="JS/Farmer.js"></script>
+<script src="JS/Customer.js"></script>
+<script>
+
+	// alert("here");
+
+	var username = JSON.parse(localStorage.getItem("username"));
+	console.log(username);
+	// alert(username);
+	console.log(username);
+	// console.log("here");
+	// if(checker(username) == false){
+	// 	   window.location.href="Login.html";
+	// 	   console.log("here");
+	// }
+</script>
+
+<title>KISSAN VARDDHI</title>
+</head>
+<body>
+      
+		
+
+        <!-- Navbar -->
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="img1.PNG" width="100px" height="100px">
+        </div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+            <li><a href="MainPage.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="productview.html">Pesticides & Fertilizers</a></li>
+         <li><a href="cropdetails.html">Crops</a></li>
+            <li><a href="Farmer.html">Farmer</a></li>
+            <li><a href="CustomerLogin.html">Customer</a></li>
+            <p value="checker"></p>
+            <li><a href="Login.html">Login</a></li>
+
+			<li><a onclick="Logout()">Logout</a></li>
+        </div>
+        </ul>
+    </nav>
+
+<h1 id="heading">CROP LIST</h1>
+
+<table id="table">
+
+	<video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+  <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
+</video>
+
+	<thead>
+		<tr>
+			<th>Crop name</th>
+			<th>Crop Age</th>
+			<th>Framer Name</th>
+			<th>Contact</th>
+			<th>Location</th>
+			<th>price</th>
+			<th>quantity</th>
+		</tr>
+	</thead>
+
+	<tbody id="tableData"></tbody>
+</table>
+
+<!-- 	<div id="box1">
+	<div id="myDynamicTable" style="overflow:scroll;height:200px;width:100%;overflow:auto">
+		<p>Checking wether the code flow is reaching here or not</p>
+		<script>
+
+			
+			console.log(window.localStorage.getItem('1'));
+
+
+			var cols = [];
+			cols.push('FarmerName');
+			cols.push('name');
+			cols.push('price');
+			cols.push('quantity');
+			cols.push('age');
+			cols.push('contact');
+			cols.push('location');
+			var list = [];
+			var storedlist = JSON.parse(localStorage.getItem("list"));
+    		console.log(storedlist);
+			list = storedlist;
+
+
+			console.log(list[0]['name']);
+			let length = list.length;
+			console.log(length);
+			var l = [];
+			console.log(l);
+			l =list;
+			function addTable() {
+			  var myTableDiv = document.getElementById("myDynamicTable");
+			
+			  var table = document.createElement('TABLE');
+			  table.border = '1';
+			
+			  var tableBody = document.createElement('TBODY');
+			  table.appendChild(tableBody);
+
+
+
+			  var tr = document.createElement('TR');
+				tableBody.appendChild(tr);
+			
+
+				
+				
+				  var td = document.createElement('TD');
+				  td.width = '75';
+				  console.log(cols[i]);
+				  console.log('xx');
+				  var temp = console.log(list[0][cols[i]]);
+				  console.log(temp);
+				  td.appendChild(document.createTextNode("FarmerName"));
+				  tr.appendChild(td);
+
+				  var td = document.createElement('TD');
+				  td.width = '75';
+				  console.log(cols[i]);
+				  console.log('xx');
+				  var temp = console.log(list[0][cols[i]]);
+				  console.log(temp);
+				  td.appendChild(document.createTextNode("name"));
+				  tr.appendChild(td);
+
+				  var td = document.createElement('TD');
+				  td.width = '75';
+				  console.log(cols[i]);
+				  console.log('xx');
+				  var temp = console.log(list[0][cols[i]]);
+				  console.log(temp);
+				  td.appendChild(document.createTextNode("price"));
+				  tr.appendChild(td);
+
+				  var td = document.createElement('TD');
+				  td.width = '75';
+				  console.log(cols[i]);
+				  console.log('xx');
+				  var temp = console.log(list[0][cols[i]]);
+				  console.log(temp);
+				  td.appendChild(document.createTextNode("quantity"));
+				  tr.appendChild(td);
+
+				  var td = document.createElement('TD');
+				  td.width = '75';
+				  console.log(cols[i]);
+				  console.log('xx');
+				  var temp = console.log(list[0][cols[i]]);
+				  console.log(temp);
+				  td.appendChild(document.createTextNode("age"));
+				  tr.appendChild(td);
+
+				  var td = document.createElement('TD');
+				  td.width = '75';
+				  console.log(cols[i]);
+				  console.log('xx');
+				  var temp = console.log(list[0][cols[i]]);
+				  console.log(temp);
+				  td.appendChild(document.createTextNode("contact"));
+				  tr.appendChild(td);
+
+				  var td = document.createElement('TD');
+				  td.width = '75';
+				  console.log(cols[i]);
+				  console.log('xx');
+				  var temp = console.log(list[0][cols[i]]);
+				  console.log(temp);
+				  td.appendChild(document.createTextNode("location"));
+				  tr.appendChild(td);
+
+
+				  var td = document.createElement('TD');
+				  td.width = '75';
+				  console.log(cols[i]);
+				  console.log('xx');
+				  var temp = console.log(list[0][cols[i]]);
+				  console.log(temp);
+				  td.appendChild(document.createTextNode("Availability"));
+				  tr.appendChild(td);
+			  
+ 
+			
+			  for (var i = 0; i < length; i++) {
+				var tr = document.createElement('TR');
+				tableBody.appendChild(tr);
+			
+				
+				  var td = document.createElement('TD');
+				  td.width = '75';
+				  console.log(cols[i]);
+				  console.log('xx');
+				  var temp = console.log(list[0][cols[i]]);
+				  console.log(temp);
+				  td.appendChild(document.createTextNode(list[i]['FarmerName']));
+				  tr.appendChild(td);
+
+				  var td = document.createElement('TD');
+				  td.width = '75';
+				  console.log(cols[i]);
+				  console.log('xx');
+				  var temp = console.log(list[0][cols[i]]);
+				  console.log(temp);
+				  td.appendChild(document.createTextNode(list[i]['name']));
+				  tr.appendChild(td);
+
+				  var td = document.createElement('TD');
+				  td.width = '75';
+				  console.log(cols[i]);
+				  console.log('xx');
+				  var temp = console.log(list[0][cols[i]]);
+				  console.log(temp);
+				  td.appendChild(document.createTextNode(list[i]['price']));
+				  tr.appendChild(td);
+
+				  var td = document.createElement('TD');
+				  td.width = '75';
+				  console.log(cols[i]);
+				  console.log('xx');
+				  var temp = console.log(list[0][cols[i]]);
+				  console.log(temp);
+				  td.appendChild(document.createTextNode(list[i]['quantity']));
+				  tr.appendChild(td);
+
+				  var td = document.createElement('TD');
+				  td.width = '75';
+				  console.log(cols[i]);
+				  console.log('xx');
+				  var temp = console.log(list[0][cols[i]]);
+				  console.log(temp);
+				  td.appendChild(document.createTextNode(list[i]['age']));
+				  tr.appendChild(td);
+
+				  var td = document.createElement('TD');
+				  td.width = '75';
+				  console.log(cols[i]);
+				  console.log('xx');
+				  var temp = console.log(list[0][cols[i]]);
+				  console.log(temp);
+				  td.appendChild(document.createTextNode(list[i]['contact']));
+				  tr.appendChild(td);
+
+				  var td = document.createElement('TD');
+				  td.width = '75';
+				  console.log(cols[i]);
+				  console.log('xx');
+				  var temp = console.log(list[0][cols[i]]);
+				  console.log(temp);
+				  td.appendChild(document.createTextNode(list[i]['location']));
+				  tr.appendChild(td);
+
+
+				  var td = document.createElement('TD');
+				  td.width = '75';
+				  console.log(cols[i]);
+				  console.log('xx');
+				  var temp = console.log(list[0][cols[i]]);
+				  console.log(temp);
+				  td.appendChild(document.createTextNode("Available"));
+				  tr.appendChild(td);
+
+
+				 
+				
+			  }
+			  myTableDiv.appendChild(table);
+			}
+			addTable();
+		</script>
+
+		
+	</div>
+</div>
+ -->
+          <!-- Footer -->
+
+          <footer class="footer-distributed">
+
+			<div class="footer-left">
+        
+				<h3>About<span>Kissan Vardhi</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					|
+					<a href="#">Blog</a>
+					|
+					<a href="#">About</a>
+					|
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">© Kissan Vardhi</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span>Toronto canada</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 012399230</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@kissanvardhi@gmail.com">kissanvardhi@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					We provide a portal for farmers and their customers</p>
+			</div>
+		</footer>
+	
+
+
+		
+
+
+
+
+
+        </body>
+
+		
+
+
+
+
+</html>

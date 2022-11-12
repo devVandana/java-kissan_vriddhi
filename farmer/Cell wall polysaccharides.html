@@ -1,0 +1,229 @@
+<html>
+<title>
+    Pesticides Details
+    </title>
+    <head>
+
+         <!--Javascript Code for this page-->
+         <script>
+                window.onload = () => {
+        // loadTableData(list);
+        // move();
+                moveUp();
+            };
+
+            function moveUp(){
+    let id = null;
+    const elem = document.getElementById("bar");
+    // elem.style.color = "#ffffff";
+    console.log(elem);
+    let pos = 400;
+    clearInterval(id);
+    id = setInterval(frame,0.1);
+    function frame(){
+        if(pos < 11){
+            clearInterval(id);
+        }else{
+            pos++;
+            console.log(elem.style.left);
+            elem.style.marginTop = pos + "px";
+            pos = pos-10;
+        }
+        }
+    }
+         </script>
+         <!-- CSS styling for this page  -->
+
+          <style>
+            
+            #bg{
+                background-color: white;
+                border-radius: 60px;
+                color: black;
+                width: auto ;
+            }
+
+
+
+            #background-video {
+            height: 100vh;
+            width: 100vw;
+            object-fit: cover;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+          }
+        #bar{
+            /*background-color: black;*/
+            /*opacity: 0.9;*/
+            margin-top: 400px;
+        }
+
+
+
+          h2{
+                color: white;
+                font-size: 50px;
+          }
+          p{
+                color: white;
+                font-size: 20px;
+          }
+
+         
+
+          @media (max-width: 750px) {
+              #background-video { display: none; }
+              body {
+                background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
+                background-size: cover;
+              }
+          }
+
+
+         </style>
+
+
+
+        <link rel="stylesheet" href="fasal.css" />
+        <link rel="stylesheet" href="CSS/Header.css" />
+        <link rel="stylesheet" href="CSS/Footer.css" />
+
+    </head>
+    
+<body>
+ 
+        <!-- Navbar -->
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="photo/img1.PNG" width="100px" height="100px">
+        </div>
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+            <li><a href="MainPage.html">Home</a></li>
+            <li><a href="farmerhome.html">Farmers List</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="productview.html">Pestisides & Fertilizers</a></li>
+         <li><a href="cropdetails.html">Crops</a></li>
+            <li><a href="Farmer.html">Farmer</a></li>
+            <li><a href="CustomerLogin.html">Customer</a></li>
+        </div>
+        </ul>
+    </nav>
+    <div>
+
+    <div id="bar">
+    <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+  <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
+</video>
+
+    <h1 id="bg" style=" text-align: center; font-size: 100px;id=d1;font-family: sans-serif;">Cell wall polysaccharides</h1>
+    <br></br>
+    <div id="full">
+    <div id="left">
+   
+    <h2 id="bg" style="margin-left: 5px;padding: 5px;">Pesticide Description:</h2>
+    <br></br>
+    <p id="bg" style="padding: 20px;">  There are different sources of polysaccharides, but the cell walls of plants, algae, fungi and somehow bacteria are considered the best reservoirs of polysaccharides. The cell wall polysaccharide includes monosaccharides, disaccharides, oligosaccharides and other lipoglycans and proteoglycans.</p>
+    <br></br>
+
+  <p id="bg" style="padding:20px;"><b>Seed Characteristics:</b>
+Light tan to brown color. It has a ribbed front and smooth back surface.
+<br>
+<b>Important Identifying Characteristics:</b>
+Wheat has short auricles which are hairy. Leaf sheath is not hairy.
+<br>
+<b>Primary Uses:</b>
+Pasture, hay and silage.</p>
+
+<p></p>
+</div>
+    
+<div clas="right">
+    <img src="photo/cell.jpg" alt="Rice Crop image" style="float:right;width:500px;height:300px;border-radius: 50;px;  margin-top: 10px;">
+    
+    </div>
+    </div>
+</div>
+</div>
+
+</body>      
+    
+     <div id="full1">
+    <div id="left1">
+<style>
+table, th, td {
+  border: 3px solid black;
+  border-collapse: collapse;
+    background-color:seagreen;
+    margin-left: 10px;
+    height: 30px;
+}
+</style>
+        
+       <!--  <table style="width:50%" >
+             <iframe src="video/pesticide.mp4" height="290" width="600" style="float:center; margin-bottom: 6em;"></iframe>
+</table> -->
+           
+        </div>
+
+    </div>
+  </div>  
+
+
+    <!-- Footer -->
+
+          <footer class="footer-distributed" style="margin-top: 300px;">
+
+            <div class="footer-left">
+        
+                <h3>About<span>Kissan Vardhi</span></h3>
+
+                <p class="footer-links">
+                    <a href="#">Home</a>
+                    |
+                    <a href="#">Blog</a>
+                    |
+                    <a href="#">About</a>
+                    |
+                    <a href="#">Contact</a>
+                </p>
+
+                <p class="footer-company-name">© Kissan Vardhi</p>
+            </div>
+
+            <div class="footer-center">
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                      <p><span>Toronto canada</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+1 012399230</p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:support@kisanvardhi@gmail.com">kisanvardhi@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p class="footer-company-about">
+                    <span>About the company</span>
+                    We provide a portal for farmers and their customers</p>
+            </div>
+        </footer>
+    
+
+    
+    
+    
+    </body>
+</html>
